@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spring Boot React WebSocket</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/main.css" rel="stylesheet">
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/app.js"></script>
+</head>
+<body>
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+
+
+	<div class="container-fluid">
+
+		<div>
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Spring Boot WebSocket React</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+
+		<div class="container">
+
+			<div class="panel panel-primary">
+
+				<div class="panel panel-heading">Spring Boot React WebSocket</div>
+
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-6">
+							<form class="form-inline">
+								<div class="form-group">
+									<label class="text-primary" for="connect">WebSocket
+										Connection:</label>
+									<button id="connect" class="btn btn-info" type="submit">Connect</button>
+									<button id="disconnect" class="btn btn-danger" type="submit"
+										disabled="disabled">Disconnect</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-md-6">
+							<form class="form-inline">
+								<div class="form-group">
+									<label class="text-success" for="name">What is your
+										name?</label> <input type="text" id="name"
+										class="form-control text-primary"
+										placeholder="Your name here...">
+								</div>
+								<button id="send" class="btn btn-warning" type="submit">Send</button>
+							</form>
+						</div>
+					</div>
+
+					<br />
+
+					<div class="panel panel-warning">
+
+						<div class="panel-heading">Messages</div>
+
+						<div class="panel-body">
+
+							<div class="row">
+								<div class="col-md-12">
+									<table id="conversation" class="table table-bordered">
+										<thead>
+											<tr class="success">
+												<th>Greetings</th>
+											</tr>
+										</thead>
+										<tbody id="greetings">
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
